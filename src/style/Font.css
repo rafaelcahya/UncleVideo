@@ -1,0 +1,62 @@
+@font-face {
+    font-family: nunito-200;
+    src: url("../asset/font/Nunito-ExtraLight.ttf");
+}
+
+.nunito-200{
+    font-family: nunito-200;
+}
+
+@font-face {
+    font-family: nunito-300;
+    src: url("../asset/font/Nunito-Light.ttf");
+}
+
+.nunito-300{
+    font-family: nunito-300;
+}
+
+@font-face {
+    font-family: nunito-400;
+    src: url("../asset/font/Nunito-Regular.ttf");
+}
+
+.nunito-400{
+    font-family: nunito-400;
+}
+
+@font-face {
+    font-family: nunito-500;
+    src: url("../asset/font/Nunito-Medium.ttf");
+}
+
+.nunito-500{
+    font-family: nunito-500;
+}
+
+@font-face {
+    font-family: nunito-600;
+    src: url("../asset/font/Nunito-SemiBold.ttf");
+}
+
+.nunito-600{
+    font-family: nunito-600;
+}
+
+@font-face {
+    font-family: nunito-700;
+    src: url("../asset/font/Nunito-Bold.ttf");
+}
+
+.nunito-700{
+    font-family: nunito-700;
+}
+
+@font-face {
+    font-family: nunito-800;
+    src: url("../asset/font/Nunito-ExtraBold.ttf");
+}
+
+.nunito-800{
+    font-family: nunito-800;
+}

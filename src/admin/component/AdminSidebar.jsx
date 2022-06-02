@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function AdminSidebar() {
     return (
@@ -9,14 +10,14 @@ function AdminSidebar() {
                     <div className='flex flex-col gap-5'>
                         <p className='nunito-800 uppercase text-[#575757] text-[11px] tracking-widest'>menu</p>
                         <div className='flex flex-col gap-5 pl-4'>
-                            <p className='text-[#7E7E7E]'>My Uploaded</p>
+                            <Link to='/' className='text-[#7E7E7E]'>My Uploaded</Link>
                             <p className='text-[#7E7E7E]'>Performance</p>
                         </div>
                     </div>
                     <div className='flex flex-col gap-5'>   
                         <p className='nunito-800 uppercase text-[#575757] text-[11px] tracking-widest'>input</p>
                         <div className='flex flex-col gap-5 pl-4'>
-                            <p className='text-[#7E7E7E]'>Upload Video</p>
+                            <Link to='/admin-upload-video' className='text-[#7E7E7E]'>Upload Video</Link>
                             <p className='text-[#7E7E7E]'>Upload Photo</p>
                         </div>
                     </div>

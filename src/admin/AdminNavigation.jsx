@@ -10,7 +10,7 @@ export default function AdminNavigation() {
             <Router>
                 <Routes>
                     <Route path="/admin-login" element={<AdminLogin/>} />
-                    <Route path="/" exact element={<AdminMyUploaded/>} />
+                    <Route path="/admin" exact element={<AdminMyUploaded/>} />
                     <Route path="/admin-upload-video" element={<AdminUploadVideo/>} />
                 </Routes>
             </Router>

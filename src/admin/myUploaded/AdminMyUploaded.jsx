@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AdminSidebar from '../component/AdminSidebar'
 
 export default function AdminMyUploaded() {
+    const [isModifyContentOpen, setIsModifyContentOpen] = useState(false)
+    function modifyContentToggle() {
+        setIsModifyContentOpen(isModifyContentOpen => !isModifyContentOpen);
+    }
+
     return (
         <>
             <AdminSidebar/>
@@ -27,7 +32,17 @@ export default function AdminMyUploaded() {
                                         </div>
                                     </div>
                                 </div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="stroke-[#575757]"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                                <div className='relative'>
+                                    {isModifyContentOpen && (
+                                        <div className='absolute -top-10 right-10 bg-white text-[14px] rounded-md shadow-lg min-w-[175px]'>
+                                            <p className='py-3 px-4 hover:bg-gray-100'>Update video</p>
+                                            <p className='text-[#FF5C58] py-3 px-4 hover:bg-red-100'>Delete video</p>
+                                        </div>
+                                    )}
+                                    <div className='cursor-pointer hover:bg-gray-200 p-3 rounded-full'>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="stroke-[#575757]" onClick={modifyContentToggle}><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                                    </div>
+                                </div>
                             </div>
                         ))
                     }

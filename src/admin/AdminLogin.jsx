@@ -22,7 +22,7 @@ function AdminLogin() {
             }else{
                 localStorage.setItem("In", response.data.In)
                 localStorage.setItem("code", response.data.code)
-                window.location.replace("/")
+                window.location.replace("/admin")
             }
         })
     }

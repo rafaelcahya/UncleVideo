@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 
 export default function InputVideo(props) {
     const { height } = props;
-    const inputRef = React.useRef();
-    const [source, setSource] = React.useState();
+    const inputRef = useRef();
+    const [source, setSource] = useState();
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];

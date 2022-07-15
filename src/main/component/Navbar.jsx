@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -25,8 +26,8 @@ function Navbar() {
                     <div className='bg-gray-800 w-10 h-10'></div>
                     <p className='block md:hidden cursor-pointer' onClick={dropdownToggle}>Menu</p>
                     <div className='hidden md:flex items-center gap-10 nunito-400'>
-                        <p>Home</p>
-                        <p>Explore</p>
+                        <Link to='/'>Home</Link>
+                        <Link to='/explore'>Explore</Link>
                         <p>Trending</p>
                         <p>Category</p>
                     </div>
@@ -41,8 +42,8 @@ function Navbar() {
             {isDropdownOpen && (
                 <div className='block md:hidden fixed top-20 z-10 nunito-400 text-white bg-black w-full'>
                     <div className='flex flex-col nunito-400 tracking-wide'>
-                        <p className='py-3 px-5 hover:bg-stone-900'>Home</p>
-                        <p className='py-3 px-5 hover:bg-stone-900'>Explore</p>
+                        <Link to='/' className='py-3 px-5 hover:bg-stone-900'>Home</Link>
+                        <Link to='/explore' className='py-3 px-5 hover:bg-stone-900'>Explore</Link>
                         <p className='py-3 px-5 hover:bg-stone-900'>Trending</p>
                         <p className='py-3 px-5 hover:bg-stone-900'>Category</p>
                     </div>
